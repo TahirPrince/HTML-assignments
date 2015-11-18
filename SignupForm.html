@@ -1,0 +1,119 @@
+<form  action="register.php" autocomplete="on"align ="Center" > 
+<body bgcolor="#87CEFF"> 
+    <h1> Registration Form </h1> 
+    <p> 
+         <label for="firstnamesignup" class="fname" data-icon="u">Student ID:   &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp</label>
+         <input id="firstnamesignup" name="firstnamesignup" required="required" type="text" placeholder="Student ID" />
+    </p>
+    <p> 
+         <label for="lastnamesignup" class="lname" data-icon="u">User Name:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp</label>
+         <input id="lastnamesignup" name="lastnamesignup" required="required" type="text" placeholder="User Name" />
+    </p>
+    <p> 
+         <label for="passwordsignup" class="youpasswd" data-icon="p">Password:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+         <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="Password"/>
+    </p>
+    <p> 
+         <label for="emailsignup" class="youmail" data-icon="e" >Email:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+         <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="example@domain.com"/> 
+    </p>
+    <p> 
+         <label>Date of Birth:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+         <select name="month" onChange="changeDate(this.options[selectedIndex].value);">
+         <option value="na">Month</option>
+         <option value="1">January</option>
+         <option value="2">February</option>
+         <option value="3">March</option>
+         <option value="4">April</option>
+         <option value="5">May</option>
+         <option value="6">June</option>
+         <option value="7">July</option>
+         <option value="8">August</option>
+         <option value="9">September</option> 
+         <option value="10">October</option>
+         <option value="11">November</option>
+         <option value="12">December</option>
+         </select>
+         <select name="day" id="day">
+         <option value="na">Day</option>
+         </select>
+         <select name="year" id="year">
+         <option value="na">Year</option>
+         </select>
+         <script language="JavaScript" type="text/javascript">
+         function changeDate(i){
+         var e = document.getElementById('day');
+         while(e.length>0)
+         e.remove(e.length-1);
+         var j=-1;
+         if(i=="na")
+         k=0;
+         else if(i==2)
+         k=28;
+         else if(i==4||i==6||i==9||i==11)
+         k=30;
+         else
+         k=31;
+         while(j++<k){
+         var s=document.createElement('option');
+         var e=document.getElementById('day');
+         if(j==0){
+         s.text="Day";
+         s.value="na";
+         try{
+         e.add(s,null);}
+         catch(ex){
+         e.add(s);}}
+         else{
+         s.text=j;
+         s.value=j;
+         try{
+         e.add(s,null);}
+         catch(ex){
+         e.add(s);}}}}
+         y = 1998;
+         while (y-->1908){
+         var s = document.createElement('option');
+         var e = document.getElementById('year');
+         s.text=y;
+         s.value=y;
+         try{
+         e.add(s,null);}
+         catch(ex){
+         e.add(s);}}
+         </script> 
+    </p>
+    <p> 
+         <label for="Phone Number" class="Phone No" data-icon="e" >Phone Number:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+         <input id="PhoneNumber" name="Phone number" required="required" type="Phone Number" placeholder="XXXX-XXXXXXX"/> 
+    </p>
+    <p> 
+         Fee:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+         <input id="Fee" name="Fee" required="required" type="Fee" placeholder="Amount inPKR"/> 
+    </p>
+    <p> <align="right">
+   Course:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ <label><input type="checkbox" id="cbox1" value="first_checkbox"> Java</label>
+<input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2">JBDC</label><input type="checkbox" id="cbox2" value="third_checkbox"> <label for="cbox3">EJB</label></label><input type="checkbox" id="cbox2" value="fourth_checkbox"> <label for="cbox4">JSP</label>
+  </p>
+    <p> 
+         <label>Gender:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+         <radio button name="Gender">
+         <input type="radio" name="sex" value="male">Male
+<input type="radio" name="sex" value="female">Female
+         </select>
+    </p>
+    <p>
+    Qualification:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<select name="Qualification" >
+         <option value="na">None</option>
+         <option value="1">BSIT</option>
+         <option value="2">BSCS</option>
+         <option value="3">MSc</option>
+         <option value="4">MCS</option>
+         </select>
+    </p>
+    <p align = "center" class="signin button"> 
+    <input  type="submit" value="Register"/> 
+    </p>
+    </body>
+</form>
