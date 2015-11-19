@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<TITLE>Tahir Prince</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+function CalculateSum(Atext, Btext, form)
+{
+var A = parseFloat(Atext);
+var B = parseFloat(Btext);
+form.Answer.value = A + B;
+}
+function CalculateSub(Atext, Btext, form)
+{
+var A = parseFloat(Atext);
+var B = parseFloat(Btext);
+form.Answer.value = A - B;
+}
+function CalculateMul(Atext, Btext, form)
+{
+var A = parseFloat(Atext);
+var B = parseFloat(Btext);
+form.Answer.value = A * B;
+}
+function CalculateDiv(Atext, Btext, form)
+{
+var A = parseFloat(Atext);
+var B = parseFloat(Btext);
+form.Answer.value = A / B;
+}
+function ClearForm(form)
+{
+form.input_A.value = "";
+form.input_B.value = "";
+form.Answer.value = "";
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<h1>Calculator</h1>
+<body align="center">
+  <style type="text/css">
+input[type="number"] {
+    border-radius:3px; 
+width:px; height:30px; 
+text-align:center; 
+margin:3px; 
+float:;}
+
+select, .equals {
+border-radius:3px; 
+margin:6px; 
+float:t;}
+</style>
+<FORM NAME="Calculator" METHOD="post">
+<P><FONT SIZE="+2">Input Value</FONT> <INPUT TYPE=Number Placeholder="Enter First Value" NAME="input_A" SIZE=10></P>
+<P><FONT SIZE="+2">Input Value</FONT> <INPUT TYPE=Number Placeholder="Enter Second Value" NAME="input_B" SIZE=10></P>
+<P>
+<INPUT TYPE="button" VALUE="  +  " name="AddButton" onClick="CalculateSum(this.form.input_A.value, this.form.input_B.value, this.form)">
+<INPUT TYPE="button" VALUE="  -  " name="SubButton" onClick="CalculateSub(this.form.input_A.value, this.form.input_B.value, this.form)">
+<INPUT TYPE="button" VALUE="  *  " name="MulButton" onClick="CalculateMul(this.form.input_A.value, this.form.input_B.value, this.form)">
+<INPUT TYPE="button" VALUE="  /  " name="DivButton" onClick="CalculateDiv(this.form.input_A.value, this.form.input_B.value, this.form)"></P>
+<P><INPUT TYPE="button" VALUE="Clear Fields" name="ClearButton" onClick="ClearForm(this.form)"></P>
+<P>Result = <INPUT TYPE=Number NAME="Answer" SIZE=12 readonly></P>
+</FORM>
+</BODY>
+</HTML>
