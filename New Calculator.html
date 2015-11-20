@@ -1,7 +1,7 @@
-<HTML>
-<HEAD>
-<TITLE>Tahir Prince</TITLE>
-<SCRIPT LANGUAGE="JavaScript">
+<html>
+<head>
+<title>Tahir Prince</title>
+<script language="JavaScript">
 function CalculateSum(Atext, Btext, form)
 {
 var A = parseFloat(Atext);
@@ -32,9 +32,9 @@ form.input_A.value = "";
 form.input_B.value = "";
 form.Answer.value = "";
 }
-</SCRIPT>
-</HEAD>
-<BODY>
+</script>
+</head>
+<body>
 <h1>Calculator</h1>
 <body align="center">
   <style type="text/css">
@@ -50,16 +50,16 @@ border-radius:3px;
 margin:6px; 
 float:t;}
 </style>
-<FORM NAME="Calculator" METHOD="post">
-<P><FONT SIZE="+2">Input Value</FONT> <INPUT TYPE=Number Placeholder="Enter First Value" NAME="input_A" SIZE=10></P>
-<P><FONT SIZE="+2">Input Value</FONT> <INPUT TYPE=Number Placeholder="Enter Second Value" NAME="input_B" SIZE=10></P>
-<P>
-<INPUT TYPE="button" VALUE="  +  " name="AddButton" onClick="CalculateSum(this.form.input_A.value, this.form.input_B.value, this.form)">
-<INPUT TYPE="button" VALUE="  -  " name="SubButton" onClick="CalculateSub(this.form.input_A.value, this.form.input_B.value, this.form)">
-<INPUT TYPE="button" VALUE="  *  " name="MulButton" onClick="CalculateMul(this.form.input_A.value, this.form.input_B.value, this.form)">
-<INPUT TYPE="button" VALUE="  /  " name="DivButton" onClick="CalculateDiv(this.form.input_A.value, this.form.input_B.value, this.form)"></P>
-<P><INPUT TYPE="button" VALUE="Clear Fields" name="ClearButton" onClick="ClearForm(this.form)"></P>
-<P>Result = <INPUT TYPE=Number NAME="Answer" SIZE=12 readonly></P>
-</FORM>
-</BODY>
-</HTML>
+<form name="Calculator" method="post">
+<p><font size="+2">Input Value</font> <input type=Number Placeholder="Enter First Value" name="input_A" size=10></p>
+<p><font SIZE="+2">Input Value</font> <input type=Number Placeholder="Enter Second Value" name="input_B" size=10></p>
+<p>
+<input type="button" value="  +  " name="AddButton" onClick="CalculateSum(this.form.input_A.value, this.form.input_B.value, this.form)">
+<input type="button" value="  -  " name="SubButton" onClick="CalculateSub(this.form.input_A.value, this.form.input_B.value, this.form)">
+<input type="button" value="  *  " name="MulButton" onClick="CalculateMul(this.form.input_A.value, this.form.input_B.value, this.form)">
+<input type="button" value="  /  " name="DivButton" onClick="CalculateDiv(this.form.input_A.value, this.form.input_B.value, this.form)"></p>
+<p><input type="button" value="Clear Fields" name="ClearButton" onClick="ClearForm(this.form)"></p>
+<p>Result = <input type=Number name="Answer" size=12 readonly></p>
+</form>
+</body>
+</html>
